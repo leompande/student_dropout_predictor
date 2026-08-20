@@ -31,6 +31,103 @@
   .high{color:var(--red);} .low{color:var(--green);}
   footer{margin-top:24px;font-size:0.8rem;color:var(--text-secondary);text-align:center;}
   img.chart{max-width:100%;border-radius:12px;border:1px solid var(--border);margin-top:24px;}
+
+    .author-footer{
+  margin-top:32px;
+  padding-top:24px;
+  border-top:1px solid var(--border);
+  text-align:center;
+}
+
+.author-card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  max-width:600px;
+  margin:0 auto 20px;
+  padding:20px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  text-align:left;
+}
+
+.author-avatar{
+  width:58px;
+  height:58px;
+  min-width:58px;
+  border-radius:50%;
+  background:var(--blue);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:1.1rem;
+}
+
+.author-info h3{
+  margin:0 0 3px;
+  font-size:1rem;
+  color:var(--text-primary);
+}
+
+.author-title{
+  margin:0 0 8px;
+  color:var(--blue);
+  font-size:0.85rem;
+  font-weight:600;
+}
+
+.author-description{
+  margin:0;
+  color:var(--text-secondary);
+  font-size:0.8rem;
+  line-height:1.5;
+}
+
+.author-links{
+  margin-top:10px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:0.8rem;
+}
+
+.author-links a{
+  color:var(--blue);
+  text-decoration:none;
+}
+
+.author-links a:hover{
+  text-decoration:underline;
+}
+
+.copyright{
+  margin-top:12px;
+  font-size:0.75rem;
+  color:var(--text-secondary);
+}
+
+.disclaimer{
+  max-width:600px;
+  margin:8px auto 0;
+  font-size:0.7rem;
+  line-height:1.5;
+  color:var(--text-secondary);
+}
+
+@media (max-width:600px){
+  .author-card{
+    text-align:center;
+    flex-direction:column;
+  }
+
+  .author-links{
+    justify-content:center;
+  }
+}
 </style>
 </head>
 <body>
@@ -80,7 +177,42 @@
     <img class="chart" src="/static/feature_importance.png" alt="Top dropout risk factors">
   </div>
 
-  <footer>This predictor is for educational/ learning purposes only, be informed that it is trained with synthetic institutional data</footer>
-</div>
+<footer class="author-footer">
+  <div class="author-card">
+    <div class="author-avatar">LM</div>
+
+    <div class="author-info">
+      <h3>Developed by Leonard Mpande</h3>
+
+      <p class="author-title">
+        AI/ML Engineer & Senior Software Developer
+      </p>
+
+      <p class="author-description">
+        Passionate about Artificial Intelligence, Machine Learning,
+        software engineering, and building data-driven solutions
+        for real-world problems.
+      </p>
+
+      <div class="author-links">
+<!--        <a href="mailto:your-email@example.com">Email</a>-->
+<!--        <span>•</span>-->
+        <a href="https://www.linkedin.com/in/leonard-mpande-1b050972/" target="_blank">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/leompande" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Leonard Mpande. All rights reserved.
+  </div>
+
+  <div class="disclaimer">
+    This predictor is for educational and learning purposes only.
+    It is trained using synthetic institutional data and should not
+    be used as the sole basis for decisions concerning students.
+  </div>
+</footer></div>
 </body>
 </html>
